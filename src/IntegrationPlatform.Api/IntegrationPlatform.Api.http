@@ -1,0 +1,6 @@
+@IntegrationPlatform.Api_HostAddress = http://localhost:5016
+
+GET {{IntegrationPlatform.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

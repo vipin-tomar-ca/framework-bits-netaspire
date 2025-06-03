@@ -1,0 +1,12 @@
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/bin/Debug/net8.0/IntegrationPlatform.Contracts.deps.json
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/bin/Debug/net8.0/IntegrationPlatform.Contracts.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/bin/Debug/net8.0/IntegrationPlatform.Contracts.pdb
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/obj/Debug/net8.0/IntegrationPlatform.Contracts.csproj.AssemblyReference.cache
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/obj/Debug/net8.0/IntegrationPlatform.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/obj/Debug/net8.0/IntegrationPlatform.Contracts.AssemblyInfoInputs.cache
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/obj/Debug/net8.0/IntegrationPlatform.Contracts.AssemblyInfo.cs
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/obj/Debug/net8.0/IntegrationPlatform.Contracts.csproj.CoreCompileInputs.cache
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/obj/Debug/net8.0/IntegrationPlatform.Contracts.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/obj/Debug/net8.0/refint/IntegrationPlatform.Contracts.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/obj/Debug/net8.0/IntegrationPlatform.Contracts.pdb
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/obj/Debug/net8.0/ref/IntegrationPlatform.Contracts.dll

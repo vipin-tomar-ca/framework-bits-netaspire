@@ -1,0 +1,6 @@
+@IntegrationPlatform.Email_HostAddress = http://localhost:5227
+
+GET {{IntegrationPlatform.Email_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

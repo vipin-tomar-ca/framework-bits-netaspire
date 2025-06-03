@@ -1,0 +1,11 @@
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/bin/Debug/net8.0/IntegrationPlatform.Core.deps.json
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/bin/Debug/net8.0/IntegrationPlatform.Core.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/bin/Debug/net8.0/IntegrationPlatform.Core.pdb
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/obj/Debug/net8.0/IntegrationPlatform.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/obj/Debug/net8.0/IntegrationPlatform.Core.AssemblyInfoInputs.cache
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/obj/Debug/net8.0/IntegrationPlatform.Core.AssemblyInfo.cs
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/obj/Debug/net8.0/IntegrationPlatform.Core.csproj.CoreCompileInputs.cache
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/obj/Debug/net8.0/IntegrationPlatform.Core.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/obj/Debug/net8.0/refint/IntegrationPlatform.Core.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/obj/Debug/net8.0/IntegrationPlatform.Core.pdb
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Core/obj/Debug/net8.0/ref/IntegrationPlatform.Core.dll

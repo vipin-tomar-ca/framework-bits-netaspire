@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "DIS/f9A0jLQ0+Ug930Wl/7RFaiKJIAtOi5FeDITU9Pi58o1ZBg/P217hRlEUk4ZeJMaTgb3S3+ogSy2GtBLKgg==",
+  "success": true,
+  "projectFilePath": "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/IntegrationPlatform.Contracts.csproj",
+  "expectedPackageFiles": [
+    "/Users/vipintomar/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/vipintomar/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/vipintomar/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "/Users/vipintomar/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

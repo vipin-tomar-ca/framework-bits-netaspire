@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>IntegrationPlatform.SFTP</id>
+        <version>1.0.0</version>
+        <title>Integration Platform SFTP</title>
+        <authors>Integration Platform Team</authors>
+        <owners>Integration Platform Team</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <license type="expression">MIT</license>
+        <projectUrl>https://github.com/your-org/IntegrationPlatform</projectUrl>
+        <description>SFTP integration service for the Integration Platform. Provides secure file transfer capabilities using SFTP protocol.</description>
+        <releaseNotes>Initial release of Integration Platform SFTP</releaseNotes>
+        <copyright>Copyright 2024</copyright>
+        <tags>integration sftp file-transfer secure-ftp</tags>
+        <dependencies>
+            <group targetFramework="net8.0">
+                <dependency id="IntegrationPlatform.Contracts" version="1.0.0" />
+                <dependency id="SSH.NET" version="2024.0.0" />
+                <dependency id="Microsoft.Extensions.Options" version="8.0.0" />
+                <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.0" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\net8.0\IntegrationPlatform.SFTP.dll" target="lib\net8.0" />
+        <file src="bin\Release\net8.0\IntegrationPlatform.SFTP.pdb" target="lib\net8.0" />
+    </files>
+</package> 

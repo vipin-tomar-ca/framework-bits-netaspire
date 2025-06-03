@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "2Pd37bC5wyfMMFqfSBUDBHEx90ziIOVgmQ6eztM34CQFGBRPN4IWKDINp7dLDEX2q0sKUmhYFf/tyJPgdn6abA==",
+  "success": true,
+  "projectFilePath": "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/IntegrationPlatform.SFTP.csproj",
+  "expectedPackageFiles": [
+    "/Users/vipintomar/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/vipintomar/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/vipintomar/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "/Users/vipintomar/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/vipintomar/.nuget/packages/ssh.net/2024.0.0/ssh.net.2024.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

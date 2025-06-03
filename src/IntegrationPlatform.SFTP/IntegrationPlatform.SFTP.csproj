@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>IntegrationPlatform.SFTP</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Integration Platform Team</Authors>
+    <Company>Integration Platform Team</Company>
+    <Description>SFTP integration service for the Integration Platform. Provides secure file transfer capabilities using SFTP protocol.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/your-org/IntegrationPlatform</PackageProjectUrl>
+    <PackageTags>integration sftp file-transfer secure-ftp</PackageTags>
+    <PackageReleaseNotes>Initial release of Integration Platform SFTP</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/your-org/IntegrationPlatform</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SSH.NET" Version="2024.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IntegrationPlatform.Contracts\IntegrationPlatform.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

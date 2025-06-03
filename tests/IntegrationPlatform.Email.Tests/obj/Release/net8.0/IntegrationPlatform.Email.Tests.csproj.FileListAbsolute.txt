@@ -1,0 +1,5 @@
+/Users/vipintomar/FinIntegration/tests/IntegrationPlatform.Email.Tests/obj/Release/net8.0/IntegrationPlatform.Email.Tests.csproj.AssemblyReference.cache
+/Users/vipintomar/FinIntegration/tests/IntegrationPlatform.Email.Tests/obj/Release/net8.0/IntegrationPlatform.Email.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vipintomar/FinIntegration/tests/IntegrationPlatform.Email.Tests/obj/Release/net8.0/IntegrationPlatform.Email.Tests.AssemblyInfoInputs.cache
+/Users/vipintomar/FinIntegration/tests/IntegrationPlatform.Email.Tests/obj/Release/net8.0/IntegrationPlatform.Email.Tests.AssemblyInfo.cs
+/Users/vipintomar/FinIntegration/tests/IntegrationPlatform.Email.Tests/obj/Release/net8.0/IntegrationPlatform.Email.Tests.csproj.CoreCompileInputs.cache

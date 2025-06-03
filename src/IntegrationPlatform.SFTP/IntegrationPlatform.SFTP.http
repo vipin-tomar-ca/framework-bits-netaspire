@@ -1,0 +1,6 @@
+@IntegrationPlatform.SFTP_HostAddress = http://localhost:5104
+
+GET {{IntegrationPlatform.SFTP_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

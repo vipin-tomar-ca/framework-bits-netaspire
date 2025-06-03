@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Monitoring/IntegrationPlatform.Monitoring.csproj": {}
+  },
+  "projects": {
+    "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/IntegrationPlatform.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/IntegrationPlatform.Contracts.csproj",
+        "projectName": "IntegrationPlatform.Contracts",
+        "projectPath": "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/IntegrationPlatform.Contracts.csproj",
+        "packagesPath": "/Users/vipintomar/.nuget/packages/",
+        "outputPath": "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vipintomar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.15/libexec/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Monitoring/IntegrationPlatform.Monitoring.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Monitoring/IntegrationPlatform.Monitoring.csproj",
+        "projectName": "IntegrationPlatform.Monitoring",
+        "projectPath": "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Monitoring/IntegrationPlatform.Monitoring.csproj",
+        "packagesPath": "/Users/vipintomar/.nuget/packages/",
+        "outputPath": "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Monitoring/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vipintomar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/IntegrationPlatform.Contracts.csproj": {
+                "projectPath": "/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Contracts/IntegrationPlatform.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "OpenTelemetry": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "OpenTelemetry.Api": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.15/libexec/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/obj/Release/net8.0/IntegrationPlatform.SFTP.csproj.AssemblyReference.cache
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/obj/Release/net8.0/IntegrationPlatform.SFTP.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/obj/Release/net8.0/IntegrationPlatform.SFTP.AssemblyInfoInputs.cache
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/obj/Release/net8.0/IntegrationPlatform.SFTP.AssemblyInfo.cs
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/obj/Release/net8.0/IntegrationPlatform.SFTP.csproj.CoreCompileInputs.cache
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/bin/Release/net8.0/IntegrationPlatform.SFTP.deps.json
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/bin/Release/net8.0/IntegrationPlatform.SFTP.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/bin/Release/net8.0/IntegrationPlatform.SFTP.pdb
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/bin/Release/net8.0/IntegrationPlatform.Contracts.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/bin/Release/net8.0/IntegrationPlatform.Contracts.pdb
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/obj/Release/net8.0/IntegrationPlatform.SFTP.csproj.CopyComplete
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/obj/Release/net8.0/IntegrationPlatform.SFTP.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/obj/Release/net8.0/refint/IntegrationPlatform.SFTP.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/obj/Release/net8.0/IntegrationPlatform.SFTP.pdb
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.SFTP/obj/Release/net8.0/ref/IntegrationPlatform.SFTP.dll

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>IntegrationPlatform.Email</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Integration Platform Team</Authors>
+    <Company>Integration Platform Team</Company>
+    <Description>Email integration service for the Integration Platform. Provides email sending capabilities with support for HTML content and attachments.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/your-org/IntegrationPlatform</PackageProjectUrl>
+    <PackageTags>integration email smtp mail</PackageTags>
+    <PackageReleaseNotes>Initial release of Integration Platform Email</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/your-org/IntegrationPlatform</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IntegrationPlatform.Contracts\IntegrationPlatform.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

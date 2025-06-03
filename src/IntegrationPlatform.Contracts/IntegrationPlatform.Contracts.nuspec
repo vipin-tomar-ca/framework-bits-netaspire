@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>IntegrationPlatform.Contracts</id>
+        <version>1.0.0</version>
+        <title>Integration Platform Contracts</title>
+        <authors>Integration Platform Team</authors>
+        <owners>Integration Platform Team</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <license type="expression">MIT</license>
+        <projectUrl>https://github.com/your-org/IntegrationPlatform</projectUrl>
+        <description>Core contracts and interfaces for the Integration Platform. Contains shared models, interfaces, and attributes used across the platform.</description>
+        <releaseNotes>Initial release of Integration Platform Contracts</releaseNotes>
+        <copyright>Copyright 2024</copyright>
+        <tags>integration sftp email monitoring contracts interfaces</tags>
+        <dependencies>
+            <group targetFramework="net8.0">
+                <dependency id="Microsoft.Extensions.Options" version="8.0.0" />
+                <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.0" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\net8.0\IntegrationPlatform.Contracts.dll" target="lib\net8.0" />
+        <file src="bin\Release\net8.0\IntegrationPlatform.Contracts.pdb" target="lib\net8.0" />
+    </files>
+</package> 

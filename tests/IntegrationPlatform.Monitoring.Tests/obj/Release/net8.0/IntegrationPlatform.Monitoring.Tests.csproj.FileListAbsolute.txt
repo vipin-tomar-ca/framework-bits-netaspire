@@ -1,0 +1,5 @@
+/Users/vipintomar/FinIntegration/tests/IntegrationPlatform.Monitoring.Tests/obj/Release/net8.0/IntegrationPlatform.Monitoring.Tests.csproj.AssemblyReference.cache
+/Users/vipintomar/FinIntegration/tests/IntegrationPlatform.Monitoring.Tests/obj/Release/net8.0/IntegrationPlatform.Monitoring.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vipintomar/FinIntegration/tests/IntegrationPlatform.Monitoring.Tests/obj/Release/net8.0/IntegrationPlatform.Monitoring.Tests.AssemblyInfoInputs.cache
+/Users/vipintomar/FinIntegration/tests/IntegrationPlatform.Monitoring.Tests/obj/Release/net8.0/IntegrationPlatform.Monitoring.Tests.AssemblyInfo.cs
+/Users/vipintomar/FinIntegration/tests/IntegrationPlatform.Monitoring.Tests/obj/Release/net8.0/IntegrationPlatform.Monitoring.Tests.csproj.CoreCompileInputs.cache

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>IntegrationPlatform.Contracts</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Integration Platform Team</Authors>
+    <Company>Integration Platform Team</Company>
+    <Description>Core contracts and interfaces for the Integration Platform. Contains shared models, interfaces, and attributes used across the platform.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/your-org/IntegrationPlatform</PackageProjectUrl>
+    <PackageTags>integration sftp email monitoring contracts interfaces</PackageTags>
+    <PackageReleaseNotes>Initial release of Integration Platform Contracts</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/your-org/IntegrationPlatform</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

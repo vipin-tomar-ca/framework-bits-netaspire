@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OpenTelemetryVersion>1.7.0</OpenTelemetryVersion>
+    <MailKitVersion>4.3.0</MailKitVersion>
+    <SSHNetVersion>2016.1.0</SSHNetVersion>
+    <SerilogVersion>3.1.1</SerilogVersion>
+  </PropertyGroup>
+</Project> 

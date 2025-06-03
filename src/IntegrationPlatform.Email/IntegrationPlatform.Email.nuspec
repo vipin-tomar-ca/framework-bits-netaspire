@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>IntegrationPlatform.Email</id>
+        <version>1.0.0</version>
+        <title>Integration Platform Email</title>
+        <authors>Integration Platform Team</authors>
+        <owners>Integration Platform Team</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <license type="expression">MIT</license>
+        <projectUrl>https://github.com/your-org/IntegrationPlatform</projectUrl>
+        <description>Email integration service for the Integration Platform. Provides email sending capabilities with support for HTML content and attachments.</description>
+        <releaseNotes>Initial release of Integration Platform Email</releaseNotes>
+        <copyright>Copyright 2024</copyright>
+        <tags>integration email smtp mail</tags>
+        <dependencies>
+            <group targetFramework="net8.0">
+                <dependency id="IntegrationPlatform.Contracts" version="1.0.0" />
+                <dependency id="MailKit" version="4.3.0" />
+                <dependency id="Microsoft.Extensions.Options" version="8.0.0" />
+                <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.0" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\net8.0\IntegrationPlatform.Email.dll" target="lib\net8.0" />
+        <file src="bin\Release\net8.0\IntegrationPlatform.Email.pdb" target="lib\net8.0" />
+    </files>
+</package> 

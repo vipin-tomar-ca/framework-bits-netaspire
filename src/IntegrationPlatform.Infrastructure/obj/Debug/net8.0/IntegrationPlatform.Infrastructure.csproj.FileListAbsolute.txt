@@ -1,0 +1,11 @@
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/bin/Debug/net8.0/IntegrationPlatform.Infrastructure.deps.json
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/bin/Debug/net8.0/IntegrationPlatform.Infrastructure.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/bin/Debug/net8.0/IntegrationPlatform.Infrastructure.pdb
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/obj/Debug/net8.0/IntegrationPlatform.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/obj/Debug/net8.0/IntegrationPlatform.Infrastructure.AssemblyInfoInputs.cache
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/obj/Debug/net8.0/IntegrationPlatform.Infrastructure.AssemblyInfo.cs
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/obj/Debug/net8.0/IntegrationPlatform.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/obj/Debug/net8.0/IntegrationPlatform.Infrastructure.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/obj/Debug/net8.0/refint/IntegrationPlatform.Infrastructure.dll
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/obj/Debug/net8.0/IntegrationPlatform.Infrastructure.pdb
+/Users/vipintomar/FinIntegration/src/IntegrationPlatform.Infrastructure/obj/Debug/net8.0/ref/IntegrationPlatform.Infrastructure.dll

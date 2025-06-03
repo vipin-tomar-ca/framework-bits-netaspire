@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>IntegrationPlatform.Monitoring</id>
+        <version>1.0.0</version>
+        <title>Integration Platform Monitoring</title>
+        <authors>Integration Platform Team</authors>
+        <owners>Integration Platform Team</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <license type="expression">MIT</license>
+        <projectUrl>https://github.com/your-org/IntegrationPlatform</projectUrl>
+        <description>Monitoring service for the Integration Platform. Provides operation history tracking, statistics, and performance monitoring capabilities.</description>
+        <releaseNotes>Initial release of Integration Platform Monitoring</releaseNotes>
+        <copyright>Copyright 2024</copyright>
+        <tags>integration monitoring metrics telemetry observability</tags>
+        <dependencies>
+            <group targetFramework="net8.0">
+                <dependency id="IntegrationPlatform.Contracts" version="1.0.0" />
+                <dependency id="Microsoft.Extensions.Options" version="8.0.0" />
+                <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.0" />
+                <dependency id="OpenTelemetry.Api" version="1.6.0" />
+                <dependency id="OpenTelemetry.Extensions.Hosting" version="1.6.0" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\net8.0\IntegrationPlatform.Monitoring.dll" target="lib\net8.0" />
+        <file src="bin\Release\net8.0\IntegrationPlatform.Monitoring.pdb" target="lib\net8.0" />
+    </files>
+</package> 
