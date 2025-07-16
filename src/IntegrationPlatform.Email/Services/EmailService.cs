@@ -2,6 +2,8 @@ using IntegrationPlatform.Contracts.Interfaces;
 using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Net.Smtp;
+using MailKit.Net.Pop3;
+using HtmlAgilityPack;
 using MailKit.Search;
 using MimeKit;
 using Microsoft.Extensions.Logging;
@@ -12,6 +14,7 @@ public class EmailService : IEmailService, IDisposable
 {
     private readonly ILogger<EmailService> _logger;
     private ImapClient? _imapClient;
+    private Pop3Client? _popClient;
     private SmtpClient? _smtpClient;
 
     public EmailService(ILogger<EmailService> logger)
@@ -190,6 +193,87 @@ public class EmailService : IEmailService, IDisposable
         }
     }
 
+    public async Task<List<EmailMessage>> RetrieveEmailsAsync(EmailRetrievalOptions options, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            if (options.Protocol == EmailProtocol.Imap)
+            {
+                using var client = new ImapClient();
+                await client.ConnectAsync(options.Host, options.Port, options.UseSsl, cancellationToken);
+                await client.AuthenticateAsync(options.Username, options.Password, cancellationToken);
+
+                var inbox = client.GetFolder(options.Folder);
+                await inbox.OpenAsync(FolderAccess.ReadOnly, cancellationToken);
+
+                var query = options.UnreadOnly ? SearchQuery.NotSeen : SearchQuery.All;
+                var uids = await inbox.SearchAsync(query, cancellationToken);
+                var result = new List<EmailMessage>();
+
+                foreach (var uid in uids)
+                {
+                    var message = await inbox.GetMessageAsync(uid, cancellationToken);
+                    result.Add(ParseMimeMessage(message, options));
+                }
+
+                return result;
+            }
+            else // POP3
+            {
+                using var client = new Pop3Client();
+                await client.ConnectAsync(options.Host, options.Port, options.UseSsl, cancellationToken);
+                await client.AuthenticateAsync(options.Username, options.Password, cancellationToken);
+
+                var count = client.Count;
+                var result = new List<EmailMessage>();
+                for (int i = 0; i < count; i++)
+                {
+                    var message = await client.GetMessageAsync(i, cancellationToken);
+                    result.Add(ParseMimeMessage(message, options));
+                }
+                return result;
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Failed retrieving emails via {Protocol}", options.Protocol);
+            return new List<EmailMessage>();
+        }
+    }
+
+    private static EmailMessage ParseMimeMessage(MimeMessage message, EmailRetrievalOptions options)
+    {
+        var html = message.HtmlBody ?? string.Empty;
+        var status = DetectStatus(html, options);
+
+        return new EmailMessage
+        {
+            MessageId = message.MessageId,
+            From = message.From.ToString(),
+            Subject = message.Subject,
+            Body = message.TextBody ?? message.HtmlBody ?? string.Empty,
+            ReceivedDate = message.Date.DateTime,
+            Attachments = message.Attachments.Select(a => new EmailAttachment
+            {
+                AttachmentId = a.ContentId,
+                FileName = a is MimePart mp ? mp.FileName : "unknown",
+                Size = a is MimePart mp2 ? mp2.Size : 0,
+                ContentType = a.ContentType.MimeType
+            }).ToList()
+        };
+    }
+
+    private static string DetectStatus(string html, EmailRetrievalOptions opts)
+    {
+        if (string.IsNullOrWhiteSpace(html)) return "Unknown";
+        var doc = new HtmlDocument();
+        doc.LoadHtml(html);
+        var text = doc.DocumentNode.InnerText.ToLowerInvariant();
+        if (opts.SuccessKeywords.Any(k => text.Contains(k.ToLowerInvariant()))) return "Success";
+        if (opts.FailureKeywords.Any(k => text.Contains(k.ToLowerInvariant()))) return "Failure";
+        return "Unknown";
+    }
+
     public async Task DisconnectAsync()
     {
         if (_imapClient != null && _imapClient.IsConnected)
@@ -208,6 +292,7 @@ public class EmailService : IEmailService, IDisposable
     public void Dispose()
     {
         _imapClient?.Dispose();
+        _popClient?.Dispose();
         _smtpClient?.Dispose();
     }
 } 

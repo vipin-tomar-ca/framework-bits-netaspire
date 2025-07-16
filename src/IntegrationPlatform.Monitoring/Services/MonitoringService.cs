@@ -172,15 +172,10 @@ public class MonitoringService : IMonitoringService
         }
     }
 
-    public async Task<Activity> StartActivityAsync(string name, string operation)
-    {
-        using var activity = _tracer.StartActivity(name);
-        activity?.SetTag("operation", operation);
-        activity?.SetTag("startTime", DateTime.UtcNow);
+    // Deprecated – prefer TelemetryHelper.TrackAsync. Keeping for backward compatibility.
+    public Task<Activity> StartActivityAsync(string name, string operation)
+        => Task.FromResult(_tracer.StartActivity(name)!);
 
-        _logger.LogInformation("Started activity {Name} for operation {Operation}", name, operation);
-        return activity;
-    }
 
     public async Task EndActivityAsync(Activity activity, string status)
     {

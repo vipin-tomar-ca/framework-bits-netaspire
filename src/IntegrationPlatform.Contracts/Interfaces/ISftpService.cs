@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace IntegrationPlatform.Contracts.Interfaces;
 
 public interface ISftpService
@@ -55,6 +57,15 @@ public interface ISftpService
     /// <returns>List of file names</returns>
     /// <exception cref="InvalidOperationException">Thrown when not connected to SFTP server</exception>
     Task<List<string>> ListFilesAsync(string remotePath, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Downloads multiple files from the SFTP server in parallel.
+    /// </summary>
+    /// <param name="files">Collection of (remotePath, localPath) tuples.</param>
+    /// <param name="maxDegreeOfParallelism">Maximum number of concurrent downloads.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>True if all downloads succeed</returns>
+    Task<bool> DownloadFilesAsync(IEnumerable<(string remotePath, string localPath)> files, int maxDegreeOfParallelism = 4, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Disconnects from the SFTP server
