@@ -1,74 +1,114 @@
 using System.Diagnostics;
 using Microsoft.Extensions.Logging;
 
-namespace IntegrationPlatform.Monitoring.Services;
-
-/// <summary>
-/// Lightweight helper to wrap common telemetry patterns (trace + log + error handling)
-/// so that business services remain terse.
-/// </summary>
-public static class TelemetryHelper
+namespace IntegrationPlatform.Monitoring.Services
 {
-    /// <summary>
-    /// Executes an asynchronous action inside an OpenTelemetry <see cref="Activity"/>,
-    /// logs start/stop messages, measures duration and surfaces any exceptions in a
-    /// consistent way.  Intended to be used with DI-resolved <see cref="ILogger"/>.
-    /// </summary>
-    /// <typeparam name="TResult">Return type of the action.</typeparam>
-    /// <param name="tracer">OpenTelemetry tracer.</param>
-    /// <param name="logger">Application logger.</param>
-    /// <param name="activityName">Name of the span/activity.</param>
-    /// <param name="operation">Semantic operation name (will be added as tag).</param>
-    /// <param name="action">Business logic delegate.</param>
-    /// <param name="tags">Optional additional span tags.</param>
-    /// <returns>Result of the delegate.</returns>
-    public static async Task<TResult> TrackAsync<TResult>(this Tracer tracer,
-                                                          ILogger logger,
-                                                          string activityName,
-                                                          string operation,
-                                                          Func<Task<TResult>> action,
-                                                          params (string Key, object? Value)[] tags)
+    public static class TelemetryHelper
     {
-        using var activity = tracer.StartActivity(activityName, ActivityKind.Internal);
-        activity?.SetTag("operation", operation);
-        foreach (var (key, val) in tags)
+        public static async Task<T?> TrackAsync<T>(
+            this ActivitySource activitySource,
+            ILogger logger,
+            string activityName,
+            string operation,
+            Func<Task<T?>> action,
+            params (string Key, object? Value)[] tags)
         {
-            activity?.SetTag(key, val);
+            var stopwatch = Stopwatch.StartNew();
+
+            using var activity = activitySource.StartActivity(activityName, ActivityKind.Internal);
+
+            if (activity != null)
+            {
+                activity.SetTag("operation.name", operation);
+                foreach (var (Key, Value) in tags)
+                {
+                    if (Value != null)
+                        activity.SetTag(Key, Value.ToString());
+                }
+            }
+
+            logger.LogInformation("Started: {Operation}", operation);
+
+            try
+            {
+                var result = await action();
+
+                stopwatch.Stop();
+                logger.LogInformation("Completed: {Operation} in {Duration}ms", operation, stopwatch.ElapsedMilliseconds);
+
+                if (activity != null)
+                {
+                    activity.SetTag("execution.duration.ms", stopwatch.ElapsedMilliseconds);
+                    activity.SetStatus(ActivityStatusCode.Ok);
+                }
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                stopwatch.Stop();
+                logger.LogError(ex, "Failed: {Operation} after {Duration}ms", operation, stopwatch.ElapsedMilliseconds);
+
+                if (activity != null)
+                {
+                    activity.SetStatus(ActivityStatusCode.Error, ex.Message);
+                    activity.RecordException(ex);
+                }
+
+                throw;
+            }
         }
 
-        var sw = Stopwatch.StartNew();
-        try
+        public static async Task TrackAsync(
+            this ActivitySource activitySource,
+            ILogger logger,
+            string activityName,
+            string operation,
+            Func<Task> action,
+            params (string Key, object? Value)[] tags)
         {
-            logger.LogInformation("Started {Activity}", activityName);
-            var result = await action();
+            var stopwatch = Stopwatch.StartNew();
 
-            activity?.SetStatus(ActivityStatusCode.Ok);
-            logger.LogInformation("Completed {Activity} in {ElapsedMs} ms", activityName, sw.ElapsedMilliseconds);
-            return result;
-        }
-        catch (Exception ex)
-        {
-            activity?.SetStatus(ActivityStatusCode.Error, ex.Message);
-            logger.LogError(ex, "{Activity} failed", activityName);
-            throw;
-        }
-        finally
-        {
-            sw.Stop();
-            activity?.SetTag("durationMs", sw.ElapsedMilliseconds);
-        }
-    }
+            using var activity = activitySource.StartActivity(activityName, ActivityKind.Internal);
 
-    /// <summary>
-    /// Overload for actions returning <see cref="Task"/>.
-    /// </summary>
-    public static async Task TrackAsync(this Tracer tracer,
-                                        ILogger logger,
-                                        string activityName,
-                                        string operation,
-                                        Func<Task> action,
-                                        params (string Key, object? Value)[] tags)
-    {
-        await tracer.TrackAsync<object?>(logger, activityName, operation, async () => { await action(); return null; }, tags);
+            if (activity != null)
+            {
+                activity.SetTag("operation.name", operation);
+                foreach (var (Key, Value) in tags)
+                {
+                    if (Value != null)
+                        activity.SetTag(Key, Value.ToString());
+                }
+            }
+
+            logger.LogInformation("Started: {Operation}", operation);
+
+            try
+            {
+                await action();
+
+                stopwatch.Stop();
+                logger.LogInformation("Completed: {Operation} in {Duration}ms", operation, stopwatch.ElapsedMilliseconds);
+
+                if (activity != null)
+                {
+                    activity.SetTag("execution.duration.ms", stopwatch.ElapsedMilliseconds);
+                    activity.SetStatus(ActivityStatusCode.Ok);
+                }
+            }
+            catch (Exception ex)
+            {
+                stopwatch.Stop();
+                logger.LogError(ex, "Failed: {Operation} after {Duration}ms", operation, stopwatch.ElapsedMilliseconds);
+
+                if (activity != null)
+                {
+                    activity.SetStatus(ActivityStatusCode.Error, ex.Message);
+                    activity.RecordException(ex);
+                }
+
+                throw;
+            }
+        }
     }
 }
